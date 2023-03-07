@@ -8,8 +8,16 @@
         <li><a href="">politics</a></li>
     </ul>
 
-    <div class="flex w-[10rem] justify-evenly">
-       <a href="./account/login.php">Login</a>
-       <a href="./account/create-account.php">Sign up</a>
+    <div class="flex w-[16rem] justify-evenly">
+        <?php if (isset($_SESSION['username'])) : ?>
+            <a href="./logout.php">Logout</a>
+            <a href="./account/profile.php">profile</a>
+            <a href="./account/dashboard.php">dashboard</a>
+        <?php else : ?>
+            <a href="./account/login.php">Login</a>
+            <a href="./account/create-account.php">Sign up</a>
+        <?php endif ?>
+
+
     </div>
 </nav>
