@@ -1,9 +1,12 @@
+<?php 
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php
-    include '../includes/links.php'
+    include './includes/links.php'
     ?>
     <title>Dashboard</title>
 </head>

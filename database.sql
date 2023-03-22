@@ -9,3 +9,12 @@ CREATE TABLE IF NOT EXISTS users(
     dob date null,
     email VARCHAR(200) NOT NULL
     )
+
+
+CREATE TABLE posts(
+ 
+    content varchar(1000) NOT NULL,
+    user_id int,
+    image varchar(100) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+)
